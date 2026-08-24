@@ -1,0 +1,1107 @@
+<!doctype html>
+<html lang="az">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#090812" />
+
+  <title>Cəmilə üçün ✨</title>
+
+  <meta
+    name="description"
+    content="Rauldan Cəmiləyə xüsusi bir salam."
+  />
+
+  <style>
+    :root {
+      color-scheme: dark;
+
+      --bg: #07070d;
+      --text: #fff9fc;
+      --muted: #c8bec8;
+
+      --pink: #ff7eb6;
+      --violet: #9f78ff;
+
+      --line: rgba(255,255,255,.13);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      min-height: 100svh;
+
+      display: grid;
+      place-items: center;
+
+      padding:
+        max(18px, env(safe-area-inset-top))
+        max(18px, env(safe-area-inset-right))
+        max(18px, env(safe-area-inset-bottom))
+        max(18px, env(safe-area-inset-left));
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      color: var(--text);
+
+      background:
+        radial-gradient(
+          circle at 15% 15%,
+          rgba(159,120,255,.24),
+          transparent 34%
+        ),
+
+        radial-gradient(
+          circle at 88% 80%,
+          rgba(255,126,182,.20),
+          transparent 34%
+        ),
+
+        linear-gradient(
+          145deg,
+          #05050a,
+          #0e0a16 54%,
+          #08070d
+        );
+    }
+
+    /* --------------------------------------------------
+       ARXA PLAN
+    -------------------------------------------------- */
+
+    body::before {
+      content: "";
+
+      position: fixed;
+      inset: -40%;
+
+      background:
+        conic-gradient(
+          from 90deg,
+          transparent,
+          rgba(255,255,255,.04),
+          transparent 30%
+        );
+
+      animation: rotate 18s linear infinite;
+
+      pointer-events: none;
+    }
+
+    .orb {
+      position: fixed;
+
+      width: 220px;
+      aspect-ratio: 1;
+
+      border-radius: 50%;
+
+      filter: blur(70px);
+
+      opacity: .34;
+
+      pointer-events: none;
+
+      animation:
+        drift 8s ease-in-out infinite alternate;
+    }
+
+    .orb.one {
+      top: -90px;
+      right: -70px;
+
+      background: var(--pink);
+    }
+
+    .orb.two {
+      bottom: -110px;
+      left: -80px;
+
+      background: var(--violet);
+
+      animation-delay: -3s;
+    }
+
+    /* --------------------------------------------------
+       ƏSAS KART
+    -------------------------------------------------- */
+
+    .card {
+      position: relative;
+      z-index: 2;
+
+      width: min(100%, 430px);
+
+      min-height:
+        min(610px, calc(100svh - 36px));
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding:
+        clamp(28px, 7vw, 48px)
+        clamp(22px, 6vw, 38px);
+
+      border:
+        1px solid var(--line);
+
+      border-radius: 32px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.10),
+          rgba(255,255,255,.035)
+        );
+
+      box-shadow:
+        0 30px 90px rgba(0,0,0,.45),
+        inset 0 1px 0 rgba(255,255,255,.12);
+
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+
+      text-align: center;
+
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          120deg,
+          transparent 24%,
+          rgba(255,255,255,.08),
+          transparent 48%
+        );
+
+      transform: translateX(-110%);
+
+      animation:
+        shine 5.5s ease-in-out infinite;
+
+      pointer-events: none;
+    }
+
+    /* --------------------------------------------------
+       İKON
+    -------------------------------------------------- */
+
+    .mark {
+      width: 74px;
+      height: 74px;
+
+      margin:
+        0 auto 28px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 24px;
+
+      font-size: 32px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,126,182,.24),
+          rgba(159,120,255,.24)
+        );
+
+      border:
+        1px solid rgba(255,255,255,.16);
+
+      box-shadow:
+        0 16px 38px rgba(159,120,255,.18);
+
+      animation:
+        float 3s ease-in-out infinite;
+    }
+
+    /* --------------------------------------------------
+       YAZILAR
+    -------------------------------------------------- */
+
+    .eyebrow {
+      margin: 0 0 12px;
+
+      color: #e8dfe7;
+
+      font-size: 12px;
+      font-weight: 700;
+
+      letter-spacing: .20em;
+
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:
+        clamp(42px, 12vw, 66px);
+
+      line-height: .98;
+
+      letter-spacing: -.045em;
+
+      background:
+        linear-gradient(
+          110deg,
+          #fff,
+          #ffd9eb 47%,
+          #d8c9ff
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+    }
+
+    .copy {
+      max-width: 320px;
+
+      min-height: 92px;
+
+      margin:
+        24px auto 28px;
+
+      color: var(--muted);
+
+      font-size: 17px;
+
+      line-height: 1.65;
+    }
+
+    .copy strong {
+      color: var(--text);
+
+      font-weight: 650;
+    }
+
+    /* --------------------------------------------------
+       DÜYMƏLƏR
+    -------------------------------------------------- */
+
+    button,
+    .whatsapp {
+      width: 100%;
+
+      min-height: 56px;
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 10px;
+
+      border: 0;
+
+      border-radius: 18px;
+
+      padding: 15px 20px;
+
+      color: #151018;
+
+      background:
+        linear-gradient(
+          110deg,
+          #fff,
+          #f9d8e8 52%,
+          #ded3ff
+        );
+
+      box-shadow:
+        0 14px 36px rgba(255,126,182,.18);
+
+      font: inherit;
+
+      font-weight: 800;
+
+      text-decoration: none;
+
+      cursor: pointer;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button:hover,
+    .whatsapp:hover {
+      transform: translateY(-2px);
+    }
+
+    button:active,
+    .whatsapp:active {
+      transform: scale(.98);
+    }
+
+    /* --------------------------------------------------
+       WHATSAPP
+    -------------------------------------------------- */
+
+    .whatsapp {
+      color: white;
+
+      background:
+        linear-gradient(
+          120deg,
+          #22c762,
+          #128c48
+        );
+
+      box-shadow:
+        0 14px 38px rgba(34,199,98,.22);
+    }
+
+    /* --------------------------------------------------
+       İMZA
+    -------------------------------------------------- */
+
+    .signature {
+      margin: 24px 0 0;
+
+      color:
+        rgba(255,255,255,.60);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 15px;
+
+      font-style: italic;
+    }
+
+    /* --------------------------------------------------
+       EKRANLAR
+    -------------------------------------------------- */
+
+    .screen {
+      display: none;
+
+      animation:
+        reveal .7s cubic-bezier(.2,.8,.2,1) both;
+    }
+
+    .screen.active {
+      display: block;
+    }
+
+    /* --------------------------------------------------
+       DOTLAR
+    -------------------------------------------------- */
+
+    .dots {
+      display: flex;
+
+      justify-content: center;
+
+      gap: 7px;
+
+      margin-top: 22px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(255,255,255,.20);
+
+      transition:
+        all .3s ease;
+    }
+
+    .dot.on {
+      width: 18px;
+
+      border-radius: 9px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--pink),
+          var(--violet)
+        );
+    }
+
+    /* --------------------------------------------------
+       ÜRƏKLƏR
+    -------------------------------------------------- */
+
+    .heart {
+      position: fixed;
+
+      bottom: -30px;
+
+      z-index: 1;
+
+      color:
+        rgba(255,255,255,.18);
+
+      animation:
+        rise var(--time) linear forwards;
+
+      pointer-events: none;
+    }
+
+    /* --------------------------------------------------
+       ANİMASİYALAR
+    -------------------------------------------------- */
+
+    @keyframes reveal {
+      from {
+        opacity: 0;
+
+        transform:
+          translateY(18px)
+          scale(.98);
+      }
+
+      to {
+        opacity: 1;
+
+        transform:
+          none;
+      }
+    }
+
+    @keyframes float {
+      50% {
+        transform:
+          translateY(-7px)
+          rotate(3deg);
+      }
+    }
+
+    @keyframes drift {
+      to {
+        transform:
+          translate(45px, 38px)
+          scale(1.14);
+      }
+    }
+
+    @keyframes rotate {
+      to {
+        transform:
+          rotate(360deg);
+      }
+    }
+
+    @keyframes shine {
+      0%, 65% {
+        transform:
+          translateX(-110%);
+      }
+
+      82%, 100% {
+        transform:
+          translateX(110%);
+      }
+    }
+
+    @keyframes rise {
+      to {
+        transform:
+          translateY(-115vh)
+          rotate(28deg);
+
+        opacity: 0;
+      }
+    }
+
+    /* --------------------------------------------------
+       MOBİL
+    -------------------------------------------------- */
+
+    @media (max-height: 620px) {
+
+      .card {
+        min-height:
+          calc(100svh - 24px);
+
+        padding-top: 24px;
+        padding-bottom: 24px;
+
+        border-radius: 26px;
+      }
+
+      .mark {
+        width: 58px;
+        height: 58px;
+
+        margin-bottom: 18px;
+
+        font-size: 25px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .copy {
+        margin:
+          18px auto 20px;
+
+        font-size: 15px;
+
+        min-height: 70px;
+      }
+
+      .signature {
+        margin-top: 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- ARXA PLAN İŞIQLARI -->
+  <div class="orb one"></div>
+  <div class="orb two"></div>
+
+
+  <main class="card">
+
+    <!-- ==================================================
+         1-Cİ EKRAN
+    ================================================== -->
+
+    <section
+      class="screen active"
+      id="one"
+    >
+
+      <div class="mark">
+        ✦
+      </div>
+
+      <p class="eyebrow">
+        Kiçik bir salam
+      </p>
+
+      <h1>
+        Salam
+      </h1>
+
+      <p class="copy">
+        Sadəcə bir söz.
+        Amma davamı var. ✨
+      </p>
+
+      <button
+        type="button"
+        onclick="goToScreen(2)"
+      >
+        Salam 👋
+      </button>
+
+      <div class="dots">
+
+        <span class="dot on"></span>
+
+        <span class="dot"></span>
+
+        <span class="dot"></span>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         2-Cİ EKRAN
+    ================================================== -->
+
+    <section
+      class="screen"
+      id="two"
+    >
+
+      <div class="mark">
+        🌷
+      </div>
+
+      <p class="eyebrow">
+        Bir sualım var
+      </p>
+
+      <h1>
+        Necəsən?
+      </h1>
+
+      <p class="copy">
+        İndi bu sualın cavabını
+        bilmək istəyirəm. 😊
+      </p>
+
+      <button
+        type="button"
+        onclick="goToScreen(3)"
+      >
+        Necəsən? 💭
+      </button>
+
+      <div class="dots">
+
+        <span class="dot"></span>
+
+        <span class="dot on"></span>
+
+        <span class="dot"></span>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         3-CÜ EKRAN
+    ================================================== -->
+
+    <section
+      class="screen"
+      id="three"
+    >
+
+      <div class="mark">
+        💬
+      </div>
+
+      <p class="eyebrow">
+        Cavabını gözləyirəm
+      </p>
+
+      <h1>
+        Cavabı<br>
+        ver
+      </h1>
+
+      <p class="copy">
+        Cavabını buradan
+        yaza bilərsən. 💜
+      </p>
+
+      <a
+        class="whatsapp"
+        href="https://wa.me/994503464588?text=Salam%20Raul%20%F0%9F%98%8A"
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="whatsappSound()"
+      >
+        WhatsApp-da cavab ver
+        <span>↗</span>
+      </a>
+
+
+      <div class="dots">
+
+        <span class="dot"></span>
+
+        <span class="dot"></span>
+
+        <span class="dot on"></span>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    /* ==================================================
+       ROMANTİK SƏS SİSTEMİ
+       
+       Xarici MP3 faylı lazım deyil.
+       Web Audio API ilə çox sakit səslər yaradılır.
+    ================================================== */
+
+    let audioContext = null;
+
+
+    /*
+      Audio sistemini yalnız istifadəçi
+      düyməyə basdıqdan sonra aktivləşdiririk.
+    */
+
+    function getAudioContext() {
+
+      if (!audioContext) {
+
+        audioContext =
+          new (
+            window.AudioContext ||
+            window.webkitAudioContext
+          )();
+
+      }
+
+      if (
+        audioContext.state === "suspended"
+      ) {
+
+        audioContext.resume();
+
+      }
+
+      return audioContext;
+    }
+
+
+    /* --------------------------------------------------
+       YUMŞAQ NOT
+    -------------------------------------------------- */
+
+    function softNote(
+      frequency,
+      duration = 0.18,
+      volume = 0.035,
+      delay = 0
+    ) {
+
+      const ctx = getAudioContext();
+
+      const oscillator =
+        ctx.createOscillator();
+
+      const gain =
+        ctx.createGain();
+
+
+      oscillator.type = "sine";
+
+      oscillator.frequency.setValueAtTime(
+        frequency,
+        ctx.currentTime + delay
+      );
+
+
+      /*
+        Çox yumşaq giriş və çıxış.
+        Beləliklə səs "klik" kimi kəskin gəlmir.
+      */
+
+      gain.gain.setValueAtTime(
+        0,
+        ctx.currentTime + delay
+      );
+
+      gain.gain.linearRampToValueAtTime(
+        volume,
+        ctx.currentTime + delay + 0.025
+      );
+
+      gain.gain.exponentialRampToValueAtTime(
+        0.001,
+        ctx.currentTime + delay + duration
+      );
+
+
+      oscillator.connect(gain);
+
+      gain.connect(
+        ctx.destination
+      );
+
+
+      oscillator.start(
+        ctx.currentTime + delay
+      );
+
+      oscillator.stop(
+        ctx.currentTime + delay + duration + 0.03
+      );
+    }
+
+
+    /* --------------------------------------------------
+       1-Cİ DÜYMƏ — SALAM
+       
+       Çox yüngül və yüksək not.
+    -------------------------------------------------- */
+
+    function helloSound() {
+
+      softNote(
+        660,
+        0.16,
+        0.028
+      );
+
+    }
+
+
+    /* --------------------------------------------------
+       2-Cİ DÜYMƏ — NECƏSƏN?
+       
+       İki yumşaq not.
+       Romantik "ding" effekti.
+    -------------------------------------------------- */
+
+    function questionSound() {
+
+      softNote(
+        523.25,
+        0.20,
+        0.030,
+        0
+      );
+
+      softNote(
+        659.25,
+        0.28,
+        0.025,
+        0.09
+      );
+
+    }
+
+
+    /* --------------------------------------------------
+       3-CÜ EKRANA KEÇİD
+       
+       Kiçik sparkle effekti.
+    -------------------------------------------------- */
+
+    function sparkleSound() {
+
+      softNote(
+        783.99,
+        0.18,
+        0.022,
+        0
+      );
+
+      softNote(
+        987.77,
+        0.24,
+        0.018,
+        0.08
+      );
+
+      softNote(
+        1174.66,
+        0.30,
+        0.014,
+        0.16
+      );
+
+    }
+
+
+    /* --------------------------------------------------
+       WHATSAPP DÜYMƏSİ
+       
+       Çox qısa təsdiq səsi.
+    -------------------------------------------------- */
+
+    function whatsappSound() {
+
+      softNote(
+        659.25,
+        0.16,
+        0.022,
+        0
+      );
+
+      softNote(
+        783.99,
+        0.20,
+        0.018,
+        0.07
+      );
+
+    }
+
+
+    /* ==================================================
+       EKRANLAR ARASINDA KEÇİD
+    ================================================== */
+
+    function goToScreen(number) {
+
+      /*
+        İlk mərhələ
+      */
+
+      if (number === 2) {
+
+        helloSound();
+
+      }
+
+
+      /*
+        İkinci mərhələ
+      */
+
+      if (number === 3) {
+
+        questionSound();
+
+        /*
+          Bir az gecikmə ilə sparkle.
+          Keçid daha yumşaq hiss olunur.
+        */
+
+        setTimeout(
+          sparkleSound,
+          180
+        );
+
+      }
+
+
+      /*
+        Bütün ekranları gizlədirik.
+      */
+
+      document
+        .querySelectorAll(".screen")
+        .forEach(
+          screen => {
+            screen.classList.remove(
+              "active"
+            );
+          }
+        );
+
+
+      /*
+        Lazım olan ekranı göstəririk.
+      */
+
+      const target =
+        number === 2
+          ? "two"
+          : "three";
+
+
+      document
+        .getElementById(target)
+        .classList.add("active");
+
+
+      /*
+        Ürək və ulduz animasiyası.
+      */
+
+      for (
+        let i = 0;
+        i < 14;
+        i++
+      ) {
+
+        setTimeout(
+          makeHeart,
+          i * 100
+        );
+
+      }
+
+    }
+
+
+    /* ==================================================
+       ÜRƏK / ULDUZ ANİMASİYASI
+    ================================================== */
+
+    function makeHeart() {
+
+      const heart =
+        document.createElement("span");
+
+
+      heart.className =
+        "heart";
+
+
+      heart.textContent =
+        Math.random() > .45
+          ? "♡"
+          : "✦";
+
+
+      heart.style.left =
+        Math.random() * 100 + "vw";
+
+
+      heart.style.fontSize =
+        12 +
+        Math.random() * 18 +
+        "px";
+
+
+      heart.style.setProperty(
+        "--time",
+        3.8 +
+        Math.random() * 3 +
+        "s"
+      );
+
+
+      document.body.appendChild(
+        heart
+      );
+
+
+      setTimeout(
+        () => heart.remove(),
+        7000
+      );
+
+    }
+
+  </script>
+
+</body>
+</html>
